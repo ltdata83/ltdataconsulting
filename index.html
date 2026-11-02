@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-    :root {
+  :root {
     --navy: #1a1d24;
     --navy-mid: #262a33;
     --gold: #2f93c8;
@@ -21,6 +21,7 @@
     --white: #ffffff;
     --border: rgba(47,147,200,0.3);
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html { scroll-behavior: smooth; }
@@ -35,7 +36,7 @@
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(13,27,42,0.97);
+    background: rgba(26,29,36,0.97);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 5%;
@@ -369,7 +370,7 @@
 
   .portfolio-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(13,27,42,0.1);
+    box-shadow: 0 12px 40px rgba(26,29,36,0.1);
   }
 
   .portfolio-card::before {
@@ -552,7 +553,6 @@
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-eyebrow">
-        <span data-lang="en"><div class="hero-eyebrow">
         <span data-lang="en">Power BI &amp; Data Analytics Consultant</span>
         <span data-lang="it">Consulente Power BI e Data Analytics</span>
       </div>
@@ -560,6 +560,7 @@
         <span data-lang="en">Power BI dashboards and reporting automation <strong>for companies across Europe</strong></span>
         <span data-lang="it">Dashboard Power BI e automazione dei report <strong>per PMI in Piemonte e in Europa</strong></span>
       </h1>
+      <p class="hero-sub" data-lang="en">
         LT Data Consulting delivers analytics, automation and business intelligence solutions to organisations that want to move from having data to acting on it.
       </p>
       <p class="hero-sub" data-lang="it">
@@ -605,7 +606,8 @@
           <span data-lang="it">Errori nei dati in meno dopo l'automazione di fatture corrieri, tracking spedizioni e consolidamento Excel</span>
         </div>
       </div>
-    </div> 
+    </div>
+  </div>
 </section>
 <!-- ABOUT -->
 <section id="about">
