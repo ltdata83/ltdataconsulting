@@ -6,6 +6,7 @@
 <title>Consulente Power BI e Data Analytics in Piemonte | LT Data Consulting</title>
 <meta name="description" content="Dashboard Power BI, automazione dei report Excel e integrazione dati per PMI. Consulente con base a Borgosesia (VC), in Piemonte e da remoto in tutta Europa.">
 <meta name="google-site-verification" content="3SBB_N70gEFKUMxHM0Sq9W1O7XiasNAj47GyqW4o94" />
+<link rel="canonical" href="https://www.ltdataconsulting.eu/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -489,6 +490,16 @@
   }
 
   .contact-detail-value a:hover { color: var(--gold); }
+
+  .copy-btn {
+    margin-left: 0.75rem; vertical-align: middle;
+    background: none; border: 1px solid var(--border);
+    color: var(--gold); font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.25rem 0.6rem; cursor: pointer; transition: all 0.2s;
+  }
+  .copy-btn:hover { border-color: var(--gold); background: rgba(47,147,200,0.1); }
+  .copy-btn.done { border-color: var(--gold); color: var(--white); }
 
   .contact-note {
     margin-top: 2rem;
@@ -1000,6 +1011,9 @@
             <div class="contact-detail-label">Email</div>
             <div class="contact-detail-value">
               <a href="mailto:info@ltdataconsulting.eu">info@ltdataconsulting.eu</a>
+              <button type="button" class="copy-btn" onclick="copyEmail(this)">
+                <span data-lang="en">Copy</span><span data-lang="it">Copia</span>
+              </button>
             </div>
           </div>
         </div>
@@ -1062,11 +1076,44 @@
 
 <script>
   function setLang(lang) {
+    try { localStorage.setItem('lt-lang', lang); } catch (e) {}
+    document.documentElement.lang = lang;
     document.body.classList.toggle('it', lang === 'it');
     document.querySelectorAll('.lang-btn').forEach((btn, i) => {
       btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'it'));
     });
   }
+
+  // Copy the email address (for visitors who use webmail)
+  function copyEmail(btn) {
+    var email = 'info@ltdataconsulting.eu';
+    var done = function () {
+      var it = document.body.classList.contains('it');
+      btn.classList.add('done');
+      btn.innerHTML = it ? '<span>Copiato ✓</span>' : '<span>Copied ✓</span>';
+      setTimeout(function () {
+        btn.classList.remove('done');
+        btn.innerHTML = '<span data-lang="en">Copy</span><span data-lang="it">Copia</span>';
+      }, 2000);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(done, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var t = document.createElement('textarea');
+      t.value = email; t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+  }
+
+  // Language from the link (?lang=it) or from the visitor's last choice
+  (function () {
+    var lang = new URLSearchParams(location.search).get('lang');
+    if (!lang) { try { lang = localStorage.getItem('lt-lang'); } catch (e) {} }
+    if (lang === 'it' || lang === 'en') setLang(lang);
+  })();
 
   // Smooth nav highlight
   const sections = document.querySelectorAll('section[id]');
