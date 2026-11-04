@@ -1,7 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ltdataconsulting.eu/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/customer-satisfaction-dashboard/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/customer-satisfaction-dashboard/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/dashboard-customer-satisfaction/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/dashboard-customer-satisfaction/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/customer-satisfaction-dashboard/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/dashboard-customer-satisfaction/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-performance-costi-logistici/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/analisi-performance-costi-logistici/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-performance-costi-logistici/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/cost-consolidation-script/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/cost-consolidation-script/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/cost-consolidation-script/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/sales-performance-monitor/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/sales-performance-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/monitor-performance-vendite/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/monitor-performance-vendite/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/sales-performance-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/monitor-performance-vendite/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/consolidamento-dati-multi-api/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/consolidamento-dati-multi-api/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/consolidamento-dati-multi-api/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/returns-monitoring-dashboard/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/returns-monitoring-dashboard/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/returns-monitoring-dashboard/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/"/>
   </url>
 </urlset>

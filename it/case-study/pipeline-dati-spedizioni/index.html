@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline Dati Spedizioni e Dashboard Interattiva — Case Study | LT Data Consulting</title>
+<meta name="description" content="Dashboard Python e Streamlit che automatizza il recupero quotidiano dei dati di spedizione da un&#x27;API di tracking logistico, con deduplicazione, mappatura degli stati ed export Excel.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<meta property="og:title" content="Pipeline Dati Spedizioni e Dashboard Interattiva — Case Study">
+<meta property="og:description" content="Dashboard Python e Streamlit che automatizza il recupero quotidiano dei dati di spedizione da un&#x27;API di tracking logistico, con deduplicazione, mappatura degli stati ed export Excel.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">Chi sono</a></li>
+    <li><a href="/#services">Servizi</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contatti</a></li>
+  </ul>
+  <div class="lang-switch">
+    <a href="/en/case-studies/shipment-data-pipeline/" hreflang="en" lang="en">EN</a>
+    <span class="active">IT</span>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Python · API · Automazione</div>
+    <h1>Pipeline Dati Spedizioni e Dashboard Interattiva</h1>
+    <p class="cs-lead">Una dashboard interattiva in Streamlit che recupera, pulisce e visualizza i dati di spedizione da un&#x27;API di tracking logistico, così i team operativi vedono lo stato delle spedizioni senza estrazioni manuali.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Settore</div>
+        <div class="cs-meta-value">Logistica · eCommerce</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Tipo di progetto</div>
+        <div class="cs-meta-value">Pipeline dati e dashboard operativa</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Servizio correlato</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">Integrazione API e Pipeline Dati</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>Il problema</h2>
+      <p>I team operativi e logistici avevano bisogno di una vista quasi in tempo reale delle spedizioni legate a uno specifico account cliente. I dati stavano in una piattaforma di tracking e andavano estratti a mano, poi puliti prima di poterli usare.</p>
+      <p>Gli export grezzi contenevano duplicati, codici di stato numerici poco leggibili e date in formati non uniformi.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>La soluzione</h2>
+      <p>Un&#x27;applicazione Python che esegue l&#x27;intero flusso e presenta il risultato in una dashboard interattiva:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Recupero</strong><span>Chiamate API giornaliere su più tipi di data, rotazione delle chiavi e retry automatici</span></div>
+        <div class="cs-step"><strong>Pulizia</strong><span>Deduplicazione per tracking number e normalizzazione delle date</span></div>
+        <div class="cs-step"><strong>Traduzione</strong><span>Codici di stato numerici convertiti in descrizioni leggibili</span></div>
+        <div class="cs-step"><strong>Consegna</strong><span>Dashboard Streamlit ed export Excel filtrato</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">Cosa comprende la soluzione</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Tabella dati</strong><span>Spedizioni filtrate per l&#x27;account selezionato</span></div>
+        <div class="cs-tile"><strong>Tabella pivot</strong><span>Spedizioni per data di spedizione e stato</span></div>
+        <div class="cs-tile"><strong>Grafico a barre</strong><span>Distribuzione degli stati nel tempo</span></div>
+        <div class="cs-tile"><strong>Grafico a torta</strong><span>Ripartizione degli stati per un giorno a scelta</span></div>
+        <div class="cs-tile"><strong>Export Excel</strong><span>Copia dei dati filtrati per archivio e audit</span></div>
+        <div class="cs-tile"><strong>Chiamate robuste</strong><span>Richieste HTTP con retry e gestione degli errori</span></div>
+      </div>
+      <div class="cs-figure-row">
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-pie.png" alt="Grafico a torta degli stati di spedizione per una data selezionata" loading="lazy" width="265" height="232">
+          <figcaption>Ripartizione degli stati per una data selezionata</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-pivot.png" alt="Tabella pivot delle spedizioni per data e stato" loading="lazy" width="322" height="126">
+          <figcaption>Pivot per data di spedizione e stato</figcaption>
+        </figure>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-table.png" alt="Tabella Streamlit delle spedizioni filtrate con codici cliente oscurati" loading="lazy" width="740" height="156">
+          <figcaption>Tabella delle spedizioni filtrate (codici cliente oscurati)</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-status-map.png" alt="Codice Python che mappa i codici di stato delle spedizioni in descrizioni" loading="lazy" width="633" height="544">
+          <figcaption>Mappatura degli stati: da codici numerici a descrizioni leggibili</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Risultati</h2>
+      <ul>
+        <li>Estrazione manuale quotidiana sostituita da un recupero automatico</li>
+        <li>Un record pulito per ogni spedizione, senza duplicati</li>
+        <li>Stati leggibili da chiunque, non solo da chi conosce i codici</li>
+        <li>Uno script riutilizzabile con output Excel per archivio e audit</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Streamlit</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">REST API</span>
+        <span class="stack-tag">Matplotlib</span>
+        <span class="stack-tag">Excel</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Nomi dei clienti e dati riservati sono stati omessi. Le immagini in questa pagina non contengono dati di clienti.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Altri progetti</h2>
+    <div class="cs-more-grid">
+      <a href="/it/case-study/dashboard-customer-satisfaction/"><small>Power BI · SAS · Analytics</small>Sistema di Customer Satisfaction Intelligence</a>
+      <a href="/it/case-study/analisi-performance-costi-logistici/"><small>Power BI · Python · Logistica</small>Strumento di Analisi Logistica e Costi</a>
+      <a href="/it/case-study/script-consolidamento-costi/"><small>Python · Excel · Automazione</small>Script di Consolidamento Costi</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Passi ore a estrarre dati a mano?</h2>
+    <p>Raccontami come scorrono oggi i tuoi dati e ti dico cosa si può automatizzare — senza impegno.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Contattami</a>
+    <a href="/#portfolio" class="btn-ghost">Tutti i progetti</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>

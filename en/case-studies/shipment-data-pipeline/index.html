@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipment Data Pipeline &amp; Interactive Dashboard — Case Study | LT Data Consulting</title>
+<meta name="description" content="Python and Streamlit dashboard that automates daily retrieval of shipment data from a logistics tracking API, with deduplication, status mapping and Excel export.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/pipeline-dati-spedizioni/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<meta property="og:title" content="Shipment Data Pipeline &amp; Interactive Dashboard — Case Study">
+<meta property="og:description" content="Python and Streamlit dashboard that automates daily retrieval of shipment data from a logistics tracking API, with deduplication, status mapping and Excel export.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/en/case-studies/shipment-data-pipeline/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <span class="active">EN</span>
+    <a href="/it/case-study/pipeline-dati-spedizioni/" hreflang="it" lang="it">IT</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Python · API · Automation</div>
+    <h1>Shipment Data Pipeline &amp; Interactive Dashboard</h1>
+    <p class="cs-lead">An interactive Streamlit dashboard that retrieves, cleans and visualises shipment data from a logistics tracking API, so operations teams see shipment status without manual extraction.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Sector</div>
+        <div class="cs-meta-value">Logistics · eCommerce</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Type</div>
+        <div class="cs-meta-value">Data pipeline &amp; operational dashboard</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Related service</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">API Integration &amp; Data Pipelines</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>The challenge</h2>
+      <p>Operations and logistics teams needed a near-real-time view of the shipments linked to a specific customer account. The data lived in a tracking platform and had to be extracted by hand, then cleaned before it could be used.</p>
+      <p>Raw exports contained duplicates, numeric status codes nobody could read at a glance, and dates in inconsistent formats.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>The solution</h2>
+      <p>A Python application that runs the whole flow and serves the result as an interactive dashboard:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Retrieve</strong><span>Daily API calls across several date types, rotating keys, with automatic retries</span></div>
+        <div class="cs-step"><strong>Clean</strong><span>Deduplication by tracking number and date normalisation</span></div>
+        <div class="cs-step"><strong>Translate</strong><span>Numeric status codes mapped to readable descriptions</span></div>
+        <div class="cs-step"><strong>Deliver</strong><span>Streamlit dashboard plus filtered Excel export</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">What the solution includes</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Data table</strong><span>Filtered shipments for the selected account</span></div>
+        <div class="cs-tile"><strong>Pivot table</strong><span>Shipments by ship date and status</span></div>
+        <div class="cs-tile"><strong>Bar chart</strong><span>Status distribution over time</span></div>
+        <div class="cs-tile"><strong>Pie chart</strong><span>Status split for any selected day</span></div>
+        <div class="cs-tile"><strong>Excel export</strong><span>Archive and audit copy of the filtered data</span></div>
+        <div class="cs-tile"><strong>Resilient calls</strong><span>Retry-aware HTTP requests and error handling</span></div>
+      </div>
+      <div class="cs-figure-row">
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-pie.png" alt="Pie chart of shipment statuses for a selected date" loading="lazy" width="265" height="232">
+          <figcaption>Status split for a selected date</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-pivot.png" alt="Pivot table of shipments by date and status" loading="lazy" width="322" height="126">
+          <figcaption>Pivot by ship date and status</figcaption>
+        </figure>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-table.png" alt="Streamlit table of filtered shipments with customer codes hidden" loading="lazy" width="740" height="156">
+          <figcaption>Filtered shipment table (customer codes hidden)</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/shipment-status-map.png" alt="Python code mapping numeric shipment status codes to descriptions" loading="lazy" width="633" height="544">
+          <figcaption>Status mapping: numeric codes to readable descriptions</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Results</h2>
+      <ul>
+        <li>Daily manual extraction replaced by automated retrieval</li>
+        <li>One clean record per shipment, with no duplicates</li>
+        <li>Statuses readable by anyone, not just by those who know the codes</li>
+        <li>A reusable script with Excel output for archive and audit</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Streamlit</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">REST API</span>
+        <span class="stack-tag">Matplotlib</span>
+        <span class="stack-tag">Excel</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Client names and confidential figures have been omitted. The images on this page contain no client data.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Other projects</h2>
+    <div class="cs-more-grid">
+      <a href="/en/case-studies/customer-satisfaction-dashboard/"><small>Power BI · SAS · Analytics</small>Customer Satisfaction Intelligence System</a>
+      <a href="/en/case-studies/logistics-performance-cost-analysis/"><small>Power BI · Python · Logistics</small>Logistics Performance &amp; Cost Analysis Tool</a>
+      <a href="/en/case-studies/cost-consolidation-script/"><small>Python · Excel · Automation</small>Consolidated Cost Processing Script</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Spending hours on manual data extraction?</h2>
+    <p>Tell me how your data flows today and I&#x27;ll tell you what can be automated — no commitment required.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Get in touch</a>
+    <a href="/#portfolio" class="btn-ghost">All projects</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>

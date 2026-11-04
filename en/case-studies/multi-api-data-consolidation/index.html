@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Source API Consolidation Workflow — Case Study | LT Data Consulting</title>
+<meta name="description" content="Python workflow that fetches large volumes of shipment data across several API keys and date ranges, then merges, deduplicates and filters it into Excel and JSON for Power BI.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/consolidamento-dati-multi-api/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/">
+<meta property="og:title" content="Multi-Source API Consolidation Workflow — Case Study">
+<meta property="og:description" content="Python workflow that fetches large volumes of shipment data across several API keys and date ranges, then merges, deduplicates and filters it into Excel and JSON for Power BI.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/en/case-studies/multi-api-data-consolidation/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <span class="active">EN</span>
+    <a href="/it/case-study/consolidamento-dati-multi-api/" hreflang="it" lang="it">IT</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Python · API · Data Engineering</div>
+    <h1>Multi-Source API Consolidation Workflow</h1>
+    <p class="cs-lead">A two-stage Python workflow that pulls large shipment datasets despite API rate limits, then merges them into one clean, deduplicated dataset ready for Excel and Power BI.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Sector</div>
+        <div class="cs-meta-value">Logistics · eCommerce</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Type</div>
+        <div class="cs-meta-value">Data engineering workflow</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Related service</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">API Integration &amp; Data Pipelines</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>The challenge</h2>
+      <p>The shipment tracking API limited how much data a single key could request. Pulling a full history in one go was not possible, and stitching partial downloads together by hand created gaps and duplicates.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>The solution</h2>
+      <p>The work is split into parallel fetch scripts and one consolidation step:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Split</strong><span>Each fetch script uses its own set of API keys and date range</span></div>
+        <div class="cs-step"><strong>Fetch</strong><span>Every script saves its batch as JSON and Excel</span></div>
+        <div class="cs-step"><strong>Merge</strong><span>A consolidation script loads and combines all batches</span></div>
+        <div class="cs-step"><strong>Deduplicate &amp; filter</strong><span>One record per tracking number; targeted extracts such as partial deliveries</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">What the solution includes</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Rate-limit handling</strong><span>Load spread across scripts and keys</span></div>
+        <div class="cs-tile"><strong>No overlaps</strong><span>Date ranges segmented to avoid double counting</span></div>
+        <div class="cs-tile"><strong>Two formats</strong><span>JSON for systems, Excel for people</span></div>
+        <div class="cs-tile"><strong>Data integrity</strong><span>Deduplication on the tracking number</span></div>
+        <div class="cs-tile"><strong>Targeted extracts</strong><span>Filtered files appended without duplicates</span></div>
+        <div class="cs-tile"><strong>Error handling</strong><span>Missing files and invalid JSON handled gracefully</span></div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2>Results</h2>
+      <ul>
+        <li>Full datasets retrieved despite API limits</li>
+        <li>A single consolidated dataset with no duplicate shipments</li>
+        <li>Output ready for Excel and Power BI without further cleaning</li>
+        <li>Easy to scale by adding scripts or keys</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">REST API</span>
+        <span class="stack-tag">JSON</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">Excel</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Client names and confidential figures have been omitted. The images on this page contain no client data.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Other projects</h2>
+    <div class="cs-more-grid">
+      <a href="/en/case-studies/returns-monitoring-dashboard/"><small>Power BI · Logistics · Operations</small>Returns Monitoring Dashboard</a>
+      <a href="/en/case-studies/shipment-data-pipeline/"><small>Python · API · Automation</small>Shipment Data Pipeline &amp; Interactive Dashboard</a>
+      <a href="/en/case-studies/customer-satisfaction-dashboard/"><small>Power BI · SAS · Analytics</small>Customer Satisfaction Intelligence System</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Hitting the limits of an API or a data export?</h2>
+    <p>Tell me where your data comes from and I&#x27;ll suggest a reliable way to pull it together — no commitment required.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Get in touch</a>
+    <a href="/#portfolio" class="btn-ghost">All projects</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Script di Consolidamento Costi — Case Study | LT Data Consulting</title>
+<meta name="description" content="Automazione Python che legge, pulisce e consolida i costi di spedizione da più file Excel in un unico workbook, con tabella pivot per vettore generata automaticamente.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/cost-consolidation-script/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/cost-consolidation-script/">
+<meta property="og:title" content="Script di Consolidamento Costi — Case Study">
+<meta property="og:description" content="Automazione Python che legge, pulisce e consolida i costi di spedizione da più file Excel in un unico workbook, con tabella pivot per vettore generata automaticamente.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/it/case-study/script-consolidamento-costi/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">Chi sono</a></li>
+    <li><a href="/#services">Servizi</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contatti</a></li>
+  </ul>
+  <div class="lang-switch">
+    <a href="/en/case-studies/cost-consolidation-script/" hreflang="en" lang="en">EN</a>
+    <span class="active">IT</span>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Python · Excel · Automazione</div>
+    <h1>Script di Consolidamento Costi</h1>
+    <p class="cs-lead">Uno script Python che raccoglie i dati di costo da decine di file Excel, li consolida in un unico workbook modello e crea una tabella pivot per vettore — al posto del consolidamento manuale settimanale.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Settore</div>
+        <div class="cs-meta-value">Logistica · Finanza</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Tipo di progetto</div>
+        <div class="cs-meta-value">Automazione del reporting</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Servizio correlato</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">Automazione del Reporting</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>Il problema</h2>
+      <p>I dati sui costi di spedizione arrivavano in tanti file Excel separati, sparsi in più cartelle. Ogni settimana qualcuno doveva aprirli uno per uno, copiare il foglio giusto in un file principale, sistemarlo e ricostruire a mano la tabella pivot: un lavoro lento e soggetto a errori.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>La soluzione</h2>
+      <p>Un unico script che esegue l&#x27;intero consolidamento dall&#x27;inizio alla fine:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Raccolta</strong><span>Individua tutti i file .xlsx in una cartella e nelle sottocartelle</span></div>
+        <div class="cs-step"><strong>Estrazione e pulizia</strong><span>Legge il foglio previsto, elimina le righe vuote, arrotonda i valori</span></div>
+        <div class="cs-step"><strong>Consolidamento</strong><span>Accoda ogni file al modello dalla prima riga libera</span></div>
+        <div class="cs-step"><strong>Sintesi</strong><span>Crea una pivot di costi e totali per vettore, ordinata per totale</span></div>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/cost-processing-loop.png" alt="Ciclo Python che legge ogni file Excel ed estrae il foglio previsto" loading="lazy" width="672" height="374">
+          <figcaption>Elaborazione dei file: un ciclo, tutti i workbook</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/cost-pivot.png" alt="Codice Python che crea una tabella pivot dei costi di spedizione per vettore" loading="lazy" width="598" height="331">
+          <figcaption>Pivot per vettore, arrotondata e ordinata</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Risultati</h2>
+      <ul>
+        <li>Consolidamento manuale settimanale eliminato</li>
+        <li>Tabella pivot pronta appena lo script termina</li>
+        <li>Qualsiasi numero di file gestito in un&#x27;unica esecuzione</li>
+        <li>Errori intercettati e registrati, con tempo di esecuzione riportato</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">openpyxl</span>
+        <span class="stack-tag">Excel</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Nomi dei clienti e dati riservati sono stati omessi. Le immagini in questa pagina non contengono dati di clienti.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Altri progetti</h2>
+    <div class="cs-more-grid">
+      <a href="/it/case-study/monitor-performance-vendite/"><small>Power BI · SAS · Vendite</small>Monitor Performance Vendite Carta</a>
+      <a href="/it/case-study/consolidamento-dati-multi-api/"><small>Python · API · Data Engineering</small>Workflow di Consolidamento Multi-API</a>
+      <a href="/it/case-study/monitor-ritiri-resi/"><small>Power BI · Logistica · Operations</small>Monitor Ritiri e Resi</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Copi e incolli ancora tra fogli Excel?</h2>
+    <p>Descrivimi la tua routine in Excel e ti dico quanta parte può girare da sola — senza impegno.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Contattami</a>
+    <a href="/#portfolio" class="btn-ghost">Tutti i progetti</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>

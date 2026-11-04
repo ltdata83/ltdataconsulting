@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitor Ritiri e Resi — Case Study | LT Data Consulting</title>
+<meta name="description" content="Report Power BI che monitora i resi dei clienti dalla richiesta di ritiro all&#x27;arrivo in magazzino, con problematiche, ritiri in gestione e stato di consegna dai dati dei corrieri.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/returns-monitoring-dashboard/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/returns-monitoring-dashboard/">
+<meta property="og:title" content="Monitor Ritiri e Resi — Case Study">
+<meta property="og:description" content="Report Power BI che monitora i resi dei clienti dalla richiesta di ritiro all&#x27;arrivo in magazzino, con problematiche, ritiri in gestione e stato di consegna dai dati dei corrieri.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/it/case-study/monitor-ritiri-resi/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">Chi sono</a></li>
+    <li><a href="/#services">Servizi</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contatti</a></li>
+  </ul>
+  <div class="lang-switch">
+    <a href="/en/case-studies/returns-monitoring-dashboard/" hreflang="en" lang="en">EN</a>
+    <span class="active">IT</span>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Power BI · Logistica · Operations</div>
+    <h1>Monitor Ritiri e Resi</h1>
+    <p class="cs-lead">Un report Power BI che segue ogni reso dalla richiesta di ritiro fino all&#x27;arrivo in magazzino, così il team vede a colpo d&#x27;occhio cosa è bloccato, cosa è in movimento e cosa è arrivato.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Settore</div>
+        <div class="cs-meta-value">Logistica · eCommerce</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Tipo di progetto</div>
+        <div class="cs-meta-value">Report BI operativo</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Servizio correlato</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">Business Intelligence e Dashboard</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>Il problema</h2>
+      <p>I resi sono il percorso inverso di una consegna: la merce torna dal cliente al magazzino e il corriere comunica ogni passaggio. Senza una vista unica era difficile capire quali ritiri erano stati annullati e perché, quali erano ancora da organizzare e quali erano già in viaggio.</p>
+      <p>I problemi emergevano tardi, spesso solo quando un cliente chiedeva che fine avesse fatto il suo reso.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>La soluzione</h2>
+      <p>I dati dei corrieri sono organizzati in tre blocchi operativi, ognuno con la propria tabella e i conteggi per stato:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Problematiche</strong><span>Ritiri annullati o non riusciti, con il motivo riportato</span></div>
+        <div class="cs-step"><strong>In gestione</strong><span>Resi prenotati, in ritiro o in attesa di conferma</span></div>
+        <div class="cs-step"><strong>In consegna</strong><span>Resi in viaggio verso il magazzino e il loro ultimo evento</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">Cosa comprende la soluzione</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Card per stato</strong><span>Numero di resi per ogni stato, a colpo d&#x27;occhio</span></div>
+        <div class="cs-tile"><strong>Note sui motivi</strong><span>Perché un ritiro è stato annullato o non è riuscito</span></div>
+        <div class="cs-tile"><strong>Riepilogo consegne</strong><span>Quota di resi per ultimo evento del corriere</span></div>
+        <div class="cs-tile"><strong>Filtri</strong><span>Per data, tipologia cliente, ordine, stato ed evento</span></div>
+        <div class="cs-tile"><strong>Aggiornamento dati</strong><span>Ultimo refresh e orario di download sempre visibili</span></div>
+        <div class="cs-tile"><strong>Tabelle di dettaglio</strong><span>Dai totali fino al singolo reso</span></div>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/returns-monitor.png" alt="Report Power BI dei resi con problematiche, ritiri in gestione e in consegna, codici oscurati" loading="lazy" width="1515" height="849">
+          <figcaption>Problematiche, ritiri in gestione e in consegna (codici cliente e ordine oscurati)</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Risultati</h2>
+      <ul>
+        <li>Ogni reso visibile dalla richiesta di ritiro all&#x27;arrivo in magazzino</li>
+        <li>Ritiri annullati o falliti segnalati con il relativo motivo</li>
+        <li>Resi in corso monitorati per stato invece che via email</li>
+        <li>Una base chiara per i solleciti a corrieri e clienti</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Power BI</span>
+        <span class="stack-tag">DAX</span>
+        <span class="stack-tag">Data Modeling</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Nomi dei clienti e dati riservati sono stati omessi. Le immagini in questa pagina non contengono dati di clienti.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Altri progetti</h2>
+    <div class="cs-more-grid">
+      <a href="/it/case-study/pipeline-dati-spedizioni/"><small>Python · API · Automazione</small>Pipeline Dati Spedizioni e Dashboard Interattiva</a>
+      <a href="/it/case-study/dashboard-customer-satisfaction/"><small>Power BI · SAS · Analytics</small>Sistema di Customer Satisfaction Intelligence</a>
+      <a href="/it/case-study/analisi-performance-costi-logistici/"><small>Power BI · Python · Logistica</small>Strumento di Analisi Logistica e Costi</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Perdi di vista resi e logistica inversa?</h2>
+    <p>Vediamo come i dati dei tuoi corrieri possono alimentare un&#x27;unica vista affidabile — senza impegno.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Contattami</a>
+    <a href="/#portfolio" class="btn-ghost">Tutti i progetti</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>

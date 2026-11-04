@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logistics Performance &amp; Cost Analysis Tool — Case Study | LT Data Consulting</title>
+<meta name="description" content="Power BI logistics report fed by Python ETL from API data: delivery KPIs, 24/48/72h performance by region, courier efficiency, transport costs YoY and late deliveries.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-performance-costi-logistici/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/">
+<meta property="og:title" content="Logistics Performance &amp; Cost Analysis Tool — Case Study">
+<meta property="og:description" content="Power BI logistics report fed by Python ETL from API data: delivery KPIs, 24/48/72h performance by region, courier efficiency, transport costs YoY and late deliveries.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/en/case-studies/logistics-performance-cost-analysis/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <span class="active">EN</span>
+    <a href="/it/case-study/analisi-performance-costi-logistici/" hreflang="it" lang="it">IT</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href="/#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-tag">Power BI · Python · Logistics</div>
+    <h1>Logistics Performance &amp; Cost Analysis Tool</h1>
+    <p class="cs-lead">A 13-page Power BI report covering the whole delivery chain — from shipment status and regional performance to courier efficiency and transport costs — fed by Python ETL from API data.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Sector</div>
+        <div class="cs-meta-value">Logistics · eCommerce</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Type</div>
+        <div class="cs-meta-value">BI report &amp; KPI design</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Related service</div>
+        <div class="cs-meta-value"><a href="/#services" style="color:inherit">Business Intelligence &amp; Dashboards</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>The challenge</h2>
+      <p>Delivery performance and transport costs were tracked in separate places. It was hard to see where shipments were failing, which regions and couriers were underperforming, and how transport costs were moving against revenue and budget.</p>
+      <p>Late deliveries were a particular blind spot: some shipments could not even be matched in the tracking system.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>The solution</h2>
+      <p>A layered pipeline feeding a single Power BI report:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>API data</strong><span>Shipment and tracking data from the logistics platform</span></div>
+        <div class="cs-step"><strong>Python ETL</strong><span>Extraction, transformation and loading</span></div>
+        <div class="cs-step"><strong>SAS</strong><span>Statistical processing and data quality checks</span></div>
+        <div class="cs-step"><strong>Power BI</strong><span>13 pages with filters and drill-down</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">What the solution includes</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Shipment monitor</strong><span>Delivered, failed attempts, in transit and exceptions</span></div>
+        <div class="cs-tile"><strong>24-48-72h delivery</strong><span>Delivery speed by region and province</span></div>
+        <div class="cs-tile"><strong>Partial deliveries</strong><span>Share of shipments not delivered in full</span></div>
+        <div class="cs-tile"><strong>Courier comparison</strong><span>Shipment detail and efficiency by courier</span></div>
+        <div class="cs-tile"><strong>Regional ranking</strong><span>Top and underperforming areas</span></div>
+        <div class="cs-tile"><strong>Transport KPIs</strong><span>Cost per shipment, value density, weight, pallets</span></div>
+        <div class="cs-tile"><strong>Transport cost</strong><span>Cost vs revenue and budget, year on year</span></div>
+        <div class="cs-tile"><strong>Parcels held at depot</strong><span>Duration and reasons for release delays</span></div>
+        <div class="cs-tile"><strong>Late deliveries</strong><span>Status by customer type, returns and unmatched shipments</span></div>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/logistics-late-deliveries.png" alt="Power BI late deliveries page: status by customer segment and list of undelivered shipments, values hidden" loading="lazy" width="1052" height="579">
+          <figcaption>Late deliveries: status by customer segment and undelivered shipments (names and values hidden)</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Results</h2>
+      <ul>
+        <li>Delivery performance, courier efficiency and costs in one place</li>
+        <li>Problem areas highlighted with conditional formatting and drill-down</li>
+        <li>Transport costs tracked against revenue, budget and the previous year</li>
+        <li>Late and unmatched deliveries made visible and traceable</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Power BI</span>
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">SAS</span>
+        <span class="stack-tag">REST API</span>
+        <span class="stack-tag">KPI Design</span>
+      </div>
+    </section>
+
+    <p class="cs-note">Client names and confidential figures have been omitted. The images on this page contain no client data.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Other projects</h2>
+    <div class="cs-more-grid">
+      <a href="/en/case-studies/cost-consolidation-script/"><small>Python · Excel · Automation</small>Consolidated Cost Processing Script</a>
+      <a href="/en/case-studies/sales-performance-monitor/"><small>Power BI · SAS · Sales</small>Paper Sales Performance Monitor</a>
+      <a href="/en/case-studies/multi-api-data-consolidation/"><small>Python · API · Data Engineering</small>Multi-Source API Consolidation Workflow</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Want a clear view of your logistics?</h2>
+    <p>Let&#x27;s look at where your delivery and cost data lives today — no commitment required.</p>
+    <a href="mailto:info@ltdataconsulting.eu" class="btn">Get in touch</a>
+    <a href="/#portfolio" class="btn-ghost">All projects</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>
