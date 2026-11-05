@@ -610,6 +610,8 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
   nav.open .nav-links { display: flex; }
   .nav-links li { list-style: none; }
   .nav-links a { display: block; padding: 0.95rem 24px; font-size: 0.9rem; }
+  .nav-links a[data-lang="it"] { display: none; }
+  body.it .nav-links a[data-lang="en"] { display: none; }
   body.it .nav-links a[data-lang="it"] { display: block; }
 }
 @media (max-width: 480px) {
