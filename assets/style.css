@@ -247,3 +247,11 @@ footer {
   .cs-step { margin-right: 0; flex-basis: 100%; }
   .cs-step::after { content: '↓'; right: auto; left: 50%; top: auto; bottom: -1rem; transform: none; }
 }
+
+/* DEMO BADGE */
+.cs-badge {
+  display: inline-block; margin-bottom: 1.25rem;
+  border: 1px solid var(--gold); color: var(--gold-light);
+  padding: 0.35rem 0.8rem; font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}

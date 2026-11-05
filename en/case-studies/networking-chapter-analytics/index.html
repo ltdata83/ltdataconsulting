@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Networking Chapter Analytics — Case Study | LT Data Consulting</title>
+<meta name="description" content="Demo project on synthetic data: KPI framework, star-schema data model and Power BI dashboards for a business referral network, from scattered spreadsheets to one source of truth.">
+<link rel="canonical" href="https://www.ltdataconsulting.eu/en/case-studies/networking-chapter-analytics/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/networking-chapter-analytics/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-gruppo-networking/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/en/case-studies/networking-chapter-analytics/">
+<meta property="og:title" content="Networking Chapter Analytics — Case Study">
+<meta property="og:description" content="Demo project on synthetic data: KPI framework, star-schema data model and Power BI dashboards for a business referral network, from scattered spreadsheets to one source of truth.">
+<meta property="og:url" content="https://www.ltdataconsulting.eu/en/case-studies/networking-chapter-analytics/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ltdataconsulting.eu/assets/logo.jpg">
+<link rel="icon" type="image/png" href="../../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/?lang=en" class="nav-logo"><img src="../../../assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span class="brand">LT <span>Data Consulting</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/?lang=en#about">About</a></li>
+    <li><a href="/?lang=en#services">Services</a></li>
+    <li><a href="/?lang=en#portfolio">Portfolio</a></li>
+    <li><a href="/?lang=en#contact">Contact</a></li>
+  </ul>
+  <div class="lang-switch">
+    <span class="active">EN</span>
+    <a href="/it/case-study/analisi-gruppo-networking/" hreflang="it" lang="it">IT</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="cs-inner">
+    <div class="breadcrumb"><a href="/?lang=en">Home</a> / <a href="/?lang=en#portfolio">Portfolio</a> / Case study</div>
+    <div class="cs-badge">Demo project · synthetic data</div>
+    <div class="cs-tag">Power BI · DAX · Data Modeling</div>
+    <h1>Networking Chapter Analytics</h1>
+    <p class="cs-lead">A demo project showing how I would rebuild the metrics, data model and dashboards of a business referral network — from scattered spreadsheets to one self-refreshing source of truth.</p>
+    <div class="cs-meta">
+      <div>
+        <div class="cs-meta-label">Sector</div>
+        <div class="cs-meta-value">Business networks · Membership organisations</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Type</div>
+        <div class="cs-meta-value">KPI design, data model &amp; dashboards</div>
+      </div>
+      <div>
+        <div class="cs-meta-label">Related service</div>
+        <div class="cs-meta-value"><a href="/?lang=en#services" style="color:inherit">Data Strategy &amp; Process Improvement</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+  <div class="cs-inner">
+
+    <section class="cs-section">
+      <h2>The challenge</h2>
+      <p>A typical referral network tracks a lot of activity — weekly attendance, referral slips, one-to-one meetings, visitor lists — but in separate spreadsheets.</p>
+      <p>Leadership gets monthly totals rather than rates, targets or trends, and preparing each report means hours of copy and paste, with numbers that change depending on who prepared them.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>The solution</h2>
+      <p>Four steps from raw logs to decisions:</p>
+      <div class="cs-flow">
+        <div class="cs-step"><strong>Audit</strong><span>Map every source, field and definition in use</span></div>
+        <div class="cs-step"><strong>Redefine KPIs</strong><span>Agree rates and targets with the group&#x27;s leadership</span></div>
+        <div class="cs-step"><strong>Model</strong><span>Clean the data and build a star-schema semantic model</span></div>
+        <div class="cs-step"><strong>Visualise</strong><span>Power BI dashboards that refresh with no manual work</span></div>
+      </div>
+      <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">What the solution includes</h3>
+      <div class="cs-grid">
+        <div class="cs-tile"><strong>Referrals per member</strong><span>Referrals passed ÷ active members, per month</span></div>
+        <div class="cs-tile"><strong>One-to-one rate</strong><span>One-to-one meetings ÷ active members: the leading indicator</span></div>
+        <div class="cs-tile"><strong>Visitor conversion</strong><span>New members ÷ visitors, per quarter: the growth engine</span></div>
+        <div class="cs-tile"><strong>Member retention</strong><span>Members renewing ÷ members due</span></div>
+        <div class="cs-tile"><strong>Closed business</strong><span>Value of business closed from referrals</span></div>
+        <div class="cs-tile"><strong>KPI dictionary</strong><span>One agreed definition for every metric</span></div>
+      </div>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/networking-data-model.png" alt="Star schema with a fact activity table and member, visitor, date and event dimensions" loading="lazy" width="1440" height="659">
+          <figcaption>One star schema, one source of truth</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/networking-dashboard.png" alt="Line chart of one-to-one meetings and referrals per month over a year, synthetic data" loading="lazy" width="1395" height="630">
+          <figcaption>One-to-ones and referrals per month (synthetic data)</figcaption>
+        </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Results</h2>
+      <ul>
+        <li>Members averaging 4+ one-to-ones a month pass 1.8× more referrals</li>
+        <li>Referrals up 23% in the latest quarter versus the first one tracked</li>
+        <li>Visitor conversion up 7 points, from 15.6% to 22.5%</li>
+        <li>Delivered: KPI dictionary, automated pipeline, Power BI model with DAX measures, dashboards and a handover session</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2>Stack</h2>
+      <div class="stack-list">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">SQL</span>
+        <span class="stack-tag">Power BI</span>
+        <span class="stack-tag">DAX</span>
+        <span class="stack-tag">Data Modeling</span>
+      </div>
+    </section>
+
+    <p class="cs-note">This is a demo project. All data is synthetic and the figures above are computed on that synthetic data; they do not describe any real organisation.</p>
+
+  </div>
+</main>
+
+<section class="cs-more">
+  <div class="cs-inner">
+    <h2>Other projects</h2>
+    <div class="cs-more-grid">
+      <a href="/en/case-studies/shipment-data-pipeline/"><small>Python · API · Automation</small>Shipment Data Pipeline &amp; Interactive Dashboard</a>
+      <a href="/en/case-studies/customer-satisfaction-dashboard/"><small>Power BI · SAS · Analytics</small>Customer Satisfaction Intelligence System</a>
+      <a href="/en/case-studies/logistics-performance-cost-analysis/"><small>Power BI · Python · Logistics</small>Logistics Performance &amp; Cost Analysis Tool</a>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta">
+  <div class="cs-inner">
+    <h2>Want a similar view of your own data?</h2>
+    <p>Sales, operations or a network of your own: let&#x27;s see what one source of truth would look like — no commitment required.</p>
+    <a href="/?lang=en#contact" class="btn">Get in touch</a>
+    <a href="/?lang=en#portfolio" class="btn-ghost">All projects</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="../../../assets/logo.jpg" alt="LT Data Consulting" width="64" height="64"></div>
+  <div class="footer-copy">© 2026 LT Data Consulting — Lorenzo Tunioli</div>
+  <div class="footer-vat">P.IVA 02838850028</div>
+</footer>
+
+</body>
+</html>
