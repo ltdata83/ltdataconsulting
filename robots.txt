@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ltdataconsulting.eu
+Sitemap: https://www.ltdataconsulting.eu/sitemap.xml
