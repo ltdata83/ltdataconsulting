@@ -45,7 +45,7 @@
     
     <div class="cs-tag">Power BI · Python · Logistics</div>
     <h1>Logistics Performance &amp; Cost Analysis Tool</h1>
-    <p class="cs-lead">A 13-page Power BI report covering the whole delivery chain — from shipment status and regional performance to courier efficiency and transport costs — fed by Python ETL from API data.</p>
+    <p class="cs-lead">A Power BI system built from scratch and developed over four annual editions, covering the whole delivery chain — from shipment status and regional performance to courier efficiency and transport costs — fed by Python ETL from API data.</p>
     <div class="cs-meta">
       <div>
         <div class="cs-meta-label">Sector</div>
@@ -68,18 +68,20 @@
 
     <section class="cs-section">
       <h2>The challenge</h2>
-      <p>Delivery performance and transport costs were tracked in separate places. It was hard to see where shipments were failing, which regions and couriers were underperforming, and how transport costs were moving against revenue and budget.</p>
+      <p>The transport department had no reliable way to measure performance: only partial, inconsistent statistics existed.</p>
+      <p>Delivery performance and transport costs sat in separate sources. It was hard to see where shipments were failing, which regions and couriers were underperforming, and how transport costs were moving against revenue and budget.</p>
       <p>Late deliveries were a particular blind spot: some shipments could not even be matched in the tracking system.</p>
     </section>
 
     <section class="cs-section">
       <h2>The solution</h2>
-      <p>A layered pipeline feeding a single Power BI report:</p>
+      <p>On my own initiative, I designed and built a logistics analytics system from scratch, then developed it through four annual editions (2022–2025), each adapted to that year&#x27;s couriers, services and priorities. It covers around 400,000 shipments a year.</p>
+      <p>A layered pipeline feeds the Power BI reports:</p>
       <div class="cs-flow">
         <div class="cs-step"><strong>API data</strong><span>Shipment and tracking data from the logistics platform</span></div>
         <div class="cs-step"><strong>Python ETL</strong><span>Extraction, transformation and loading</span></div>
         <div class="cs-step"><strong>SAS</strong><span>Statistical processing and data quality checks</span></div>
-        <div class="cs-step"><strong>Power BI</strong><span>13 pages with filters and drill-down</span></div>
+        <div class="cs-step"><strong>Power BI</strong><span>Interactive reports with filters and drill-down</span></div>
       </div>
       <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">What the solution includes</h3>
       <div class="cs-grid">
@@ -97,12 +99,22 @@
           <img src="../../../assets/img/logistics-late-deliveries.png" alt="Power BI late deliveries page: status by customer segment and list of undelivered shipments, values hidden" loading="lazy" width="1052" height="579">
           <figcaption>Late deliveries: status by customer segment and undelivered shipments (names and values hidden)</figcaption>
         </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/logistics-regional-delivery-en.png" alt="Bar chart: share of shipments delivered within 24, 48 and 72 hours for each Italian region, illustrative data" loading="lazy" width="1800" height="1350">
+          <figcaption>Deliveries within 24, 48 and 72 hours by region: the North–South gap (chart recreated with illustrative data)</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/logistics-cost-vs-budget-en.png" alt="Bar chart: weekly deviation of transport cost from budget, in percentage points, illustrative data" loading="lazy" width="1800" height="1012">
+          <figcaption>Transport cost against budget, week by week (chart recreated with illustrative data)</figcaption>
+        </figure>
     </section>
 
     <section class="cs-section">
       <h2>Results</h2>
       <ul>
+        <li>A department with no reliable metrics moved to complete, up-to-date control</li>
         <li>Delivery performance, courier efficiency and costs in one place</li>
+        <li>Regional gaps made visible: next-day delivery ranges from over 70% in the best regions to almost zero in the most remote ones, with province-level detail</li>
         <li>Problem areas highlighted with conditional formatting and drill-down</li>
         <li>Transport costs tracked against revenue, budget and the previous year</li>
         <li>Late and unmatched deliveries made visible and traceable</li>
@@ -120,7 +132,7 @@
       </div>
     </section>
 
-    <p class="cs-note">Client names and confidential figures have been omitted. The images on this page contain no client data.</p>
+    <p class="cs-note">Client names and confidential figures have been omitted. The images on this page contain no client data; recreated charts use illustrative data.</p>
 
   </div>
 </main>

@@ -45,7 +45,7 @@
     
     <div class="cs-tag">Power BI · Python · Logistica</div>
     <h1>Strumento di Analisi Logistica e Costi</h1>
-    <p class="cs-lead">Un report Power BI da 13 pagine che copre l&#x27;intera catena di consegna — dallo stato delle spedizioni alla performance regionale, fino a efficienza dei corrieri e costi di trasporto — alimentato da ETL Python su dati API.</p>
+    <p class="cs-lead">Un sistema Power BI costruito da zero e sviluppato in quattro edizioni annuali, che copre l&#x27;intera catena di consegna — dallo stato delle spedizioni alla performance regionale, fino a efficienza dei corrieri e costi di trasporto — alimentato da ETL Python su dati API.</p>
     <div class="cs-meta">
       <div>
         <div class="cs-meta-label">Settore</div>
@@ -68,18 +68,20 @@
 
     <section class="cs-section">
       <h2>Il problema</h2>
-      <p>Performance di consegna e costi di trasporto venivano monitorati in posti diversi. Era difficile capire dove le spedizioni fallivano, quali regioni e corrieri rendevano meno e come si muovevano i costi di trasporto rispetto a fatturato e budget.</p>
+      <p>Il reparto trasporti non aveva un sistema di misura: esistevano solo statistiche parziali e poco affidabili.</p>
+      <p>Performance di consegna e costi di trasporto erano sparsi in fonti diverse. Era difficile capire dove le spedizioni fallivano, quali regioni e corrieri rendevano meno e come si muovevano i costi di trasporto rispetto a fatturato e budget.</p>
       <p>I ritardi di consegna erano un punto cieco: alcune spedizioni non risultavano nemmeno nel sistema di tracking.</p>
     </section>
 
     <section class="cs-section">
       <h2>La soluzione</h2>
-      <p>Una pipeline a più livelli che alimenta un unico report Power BI:</p>
+      <p>Di mia iniziativa ho progettato e costruito da zero un sistema di analisi logistica, poi sviluppato in quattro edizioni annuali (2022-2025), ognuna adattata a corrieri, servizi e priorità dell&#x27;anno. Copre circa 400.000 spedizioni l&#x27;anno.</p>
+      <p>Una pipeline a più livelli alimenta i report Power BI:</p>
       <div class="cs-flow">
         <div class="cs-step"><strong>Dati API</strong><span>Dati di spedizione e tracking dalla piattaforma logistica</span></div>
         <div class="cs-step"><strong>ETL Python</strong><span>Estrazione, trasformazione e caricamento</span></div>
         <div class="cs-step"><strong>SAS</strong><span>Elaborazione statistica e controlli di qualità dei dati</span></div>
-        <div class="cs-step"><strong>Power BI</strong><span>13 pagine con filtri e drill-down</span></div>
+        <div class="cs-step"><strong>Power BI</strong><span>Report interattivi con filtri e drill-down</span></div>
       </div>
       <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin-top:2rem;">Cosa comprende la soluzione</h3>
       <div class="cs-grid">
@@ -97,12 +99,22 @@
           <img src="../../../assets/img/logistics-late-deliveries.png" alt="Pagina Power BI dei ritardi: stati per segmento cliente ed elenco delle spedizioni non consegnate, valori oscurati" loading="lazy" width="1052" height="579">
           <figcaption>Ritardi di consegna: stati per segmento cliente e spedizioni non consegnate (nomi e valori oscurati)</figcaption>
         </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/logistics-regional-delivery-it.png" alt="Grafico a barre: quota di spedizioni consegnate entro 24, 48 e 72 ore per ciascuna regione italiana, dati illustrativi" loading="lazy" width="1800" height="1350">
+          <figcaption>Consegne entro 24, 48 e 72 ore per regione: il divario tra Nord e Sud (grafico ricreato con dati illustrativi)</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <img src="../../../assets/img/logistics-cost-vs-budget-it.png" alt="Grafico a barre: scostamento settimanale del costo di trasporto dal budget, in punti percentuali, dati illustrativi" loading="lazy" width="1800" height="1012">
+          <figcaption>Costo di trasporto rispetto al budget, settimana per settimana (grafico ricreato con dati illustrativi)</figcaption>
+        </figure>
     </section>
 
     <section class="cs-section">
       <h2>Risultati</h2>
       <ul>
+        <li>Un reparto senza misure affidabili è passato a un controllo completo e aggiornato</li>
         <li>Performance di consegna, efficienza dei corrieri e costi in un unico posto</li>
+        <li>Divari territoriali resi evidenti: la quota di consegne in 24 ore va da oltre il 70% nelle regioni migliori a quasi zero in quelle più lontane, con dettaglio per provincia</li>
         <li>Aree critiche evidenziate con formattazione condizionale e drill-down</li>
         <li>Costi di trasporto confrontati con fatturato, budget e anno precedente</li>
         <li>Ritardi e spedizioni non tracciate resi visibili e verificabili</li>
@@ -120,7 +132,7 @@
       </div>
     </section>
 
-    <p class="cs-note">Nomi dei clienti e dati riservati sono stati omessi. Le immagini in questa pagina non contengono dati di clienti.</p>
+    <p class="cs-note">Nomi dei clienti e dati riservati sono stati omessi. Le immagini in questa pagina non contengono dati di clienti; i grafici ricreati usano dati illustrativi.</p>
 
   </div>
 </main>
