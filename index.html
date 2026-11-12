@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulente Power BI e Data Analytics in Piemonte | LT Data Consulting</title>
-<meta name="description" content="Dashboard Power BI, automazione dei report Excel e integrazione dati per PMI. Consulente con base a Borgosesia (VC), in Piemonte e da remoto in tutta Europa.">
+<title>Power BI &amp; Data Analytics Consultant | LT Data Consulting</title>
+<meta name="description" content="Lorenzo Tunioli, Power BI and data analytics consultant: dashboards, reporting automation and data integration for companies across Europe. Based in Piedmont, Italy, working remotely.">
 <meta name="google-site-verification" content="3SBB_N70gEFKUMxHM0Sq9W1O7XiasNAj47GyqW4o94" />
 <link rel="canonical" href="https://www.ltdataconsulting.eu/">
+<link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/">
+<link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/">
+<link rel="alternate" hreflang="x-default" href="https://www.ltdataconsulting.eu/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -549,6 +552,7 @@
     display: flex; gap: 0.5rem;
   }
 
+  a.lang-btn, span.lang-btn { display: inline-block; text-decoration: none; }
   .lang-btn {
     background: none; border: 1px solid var(--border);
     color: rgba(255,255,255,0.5); padding: 0.3rem 0.7rem;
@@ -641,8 +645,8 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
   </ul>
   <div class="nav-right">
     <div class="lang-toggle">
-      <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('it')">IT</button>
+      <span class="lang-btn active" aria-current="true">EN</span>
+      <a class="lang-btn" href="/it/" hreflang="it" lang="it" onclick="return goLang('/it/')">IT</a>
     </div>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -1157,13 +1161,9 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
 
 <button class="to-top" type="button" aria-label="Back to top">↑</button>
 <script>
-  function setLang(lang) {
-    try { localStorage.setItem('lt-lang', lang); } catch (e) {}
-    document.documentElement.lang = lang;
-    document.body.classList.toggle('it', lang === 'it');
-    document.querySelectorAll('.lang-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'it'));
-    });
+  function goLang(url) {
+    location.href = url + location.hash;
+    return false;
   }
 
   // Copy the email address (for visitors who use webmail)
@@ -1190,11 +1190,11 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
     }
   }
 
-  // Language from the link (?lang=it) or from the visitor's last choice
+  // Old links of the form /?lang=it now live at /it/
   (function () {
-    var lang = new URLSearchParams(location.search).get('lang');
-    if (!lang) { try { lang = localStorage.getItem('lt-lang'); } catch (e) {} }
-    if (lang === 'it' || lang === 'en') setLang(lang);
+    if (new URLSearchParams(location.search).get('lang') === 'it') {
+      location.replace('/it/' + location.hash);
+    }
   })();
 
   // Smooth nav highlight
