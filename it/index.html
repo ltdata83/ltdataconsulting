@@ -322,6 +322,41 @@
     text-transform: uppercase;
   }
 
+
+  /* ── ABOUT PHOTO ── */
+  .about-photo { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2.25rem; }
+  .about-photo img {
+    width: 132px; height: 132px; border-radius: 50%; object-fit: cover;
+    border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--gold), 0 10px 30px rgba(26,29,36,0.15);
+  }
+  .about-photo-name { font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--navy); }
+  .about-photo-role { font-size: 0.82rem; color: var(--text-light); margin-top: 0.2rem; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--cream); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+  .testimonial {
+    background: var(--white); border-top: 3px solid var(--gold);
+    padding: 2rem 1.75rem 1.75rem; position: relative;
+    box-shadow: 0 6px 24px rgba(26,29,36,0.05);
+  }
+  .testimonial::before {
+    content: '“'; position: absolute; top: 0.4rem; right: 1.2rem;
+    font-family: Georgia, serif; font-size: 4rem; line-height: 1; color: var(--cream-dark);
+  }
+  .testimonial-stars { color: #c8902f; letter-spacing: 0.15em; font-size: 0.95rem; margin-bottom: 0.9rem; }
+  .testimonial blockquote { font-size: 0.93rem; line-height: 1.75; color: var(--text); margin: 0; }
+  .testimonial-tr { margin-top: 0.9rem; font-size: 0.82rem; line-height: 1.65; color: var(--text-light); font-style: italic; }
+  .testimonial-tr span { font-style: normal; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-right: 0.35rem; }
+  .testimonial-who { margin-top: 1.4rem; padding-top: 1.1rem; border-top: 1px solid var(--cream-dark); }
+  .testimonial-name { font-family: 'Montserrat', sans-serif; font-weight: 500; color: var(--navy); font-size: 0.98rem; }
+  .testimonial-role { font-size: 0.8rem; color: var(--text-light); margin-top: 0.15rem; }
+  .testimonial-src { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-top: 0.6rem; }
+  .testimonials-more { margin-top: 2rem; }
+  .testimonials-more a { color: var(--gold); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+  .testimonials-more a:hover { color: var(--navy); }
+  @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
   /* ── SERVICES ── */
   #services { background: var(--navy); }
 
@@ -738,6 +773,13 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
 
       <!-- LEFT COLUMN: CREDENTIALS -->
       <div class="about-credentials">
+        <div class="about-photo">
+          <img src="../assets/img/lorenzo-tunioli.jpg" alt="Lorenzo Tunioli, fondatore di LT Data Consulting" width="132" height="132" loading="lazy">
+          <div>
+            <div class="about-photo-name">Lorenzo Tunioli</div>
+            <div class="about-photo-role">Fondatore e consulente di analisi dati</div>
+          </div>
+        </div>
 
         <div class="credential-item">
           <div class="credential-label">
@@ -1066,6 +1108,46 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/it/case-study/analisi-gruppo-networking/" class="portfolio-link" data-lang="it">Leggi il case study →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Dicono di me</div>
+      <h2 class="section-title">Referenze</h2>
+    </div>
+    <div class="testimonials-grid">
+        <figure class="testimonial">
+          <div class="testimonial-stars" aria-label="5/5">★★★★★</div>
+          <blockquote lang="en">Lorenzo is a brilliant professional to work with. I had the pleasure of working with him on several projects, and I was consistently impressed by his expertise, commitment, and ability to deliver high-quality results. He’s a great team player and someone I’d be happy to work with again.</blockquote>
+          <p class="testimonial-tr" lang="it"><span>Traduzione</span>Lorenzo è un professionista brillante con cui lavorare. Ho avuto il piacere di lavorare con lui su diversi progetti e sono rimasto sempre colpito dalla sua competenza, dal suo impegno e dalla sua capacità di ottenere risultati di alta qualità. È un ottimo lavoratore di squadra e una persona con cui sarei felice di lavorare di nuovo.</p>
+          <figcaption class="testimonial-who">
+            <div class="testimonial-name">Hamidoon Qadir</div>
+            <div class="testimonial-role">Director Operations &amp; Programme Delivery</div>
+            <div class="testimonial-src">Recensione su LinkedIn · settembre 2026</div>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <div class="testimonial-stars" aria-label="5/5">★★★★★</div>
+          <blockquote lang="it">Ho avuto modo di conoscere Lorenzo durante un&#x27;attività professionale e sono rimasta piacevolmente colpita dal suo solido background analitico e dalle sue capacità di comprendere le esigenze del business. Unisce un problem solving strutturato ad una buona capacità di trasformare i dati in soluzioni concrete per l&#x27;organizzazione. Lo consiglierei per attività quali: business consulting, analytics, reporting inerente al miglioramento dei processi.</blockquote>
+          <figcaption class="testimonial-who">
+            <div class="testimonial-name">Mirtes Della Monte Perolio</div>
+            <div class="testimonial-role">Sales Recruitment Manager, Saleance</div>
+            <div class="testimonial-src">Recensione su LinkedIn · ottobre 2026</div>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote lang="it">Durante il periodo di collaborazione, Lorenzo si è distinto come un professionista di livello nel campo dell’analisi dei dati, dimostrando competenze tecniche avanzate e una spiccata capacità di trasformare dati complessi in informazioni strategiche.</blockquote>
+          <figcaption class="testimonial-who">
+            <div class="testimonial-name">HR Director, Mondoffice</div>
+            <div class="testimonial-role">Ex datore di lavoro (2021–2025)</div>
+            <div class="testimonial-src">Lettera di referenze · novembre 2025 · Lettera completa disponibile su richiesta</div>
+          </figcaption>
+        </figure>
+    </div>
+    <div class="testimonials-more"><a href="https://www.linkedin.com/in/lorenzotunioli" target="_blank" rel="noopener">Vedi le recensioni su LinkedIn →</a></div>
   </div>
 </section>
 
