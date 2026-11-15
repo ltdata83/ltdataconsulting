@@ -184,6 +184,15 @@
 
   .hero-cta-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
+  .hero-proof {
+    display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.6rem;
+    margin-top: 1.75rem; text-decoration: none;
+    font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: color 0.2s;
+  }
+  .hero-proof:hover { color: var(--gold-light); }
+  .hero-proof-stars { color: #d9a441; letter-spacing: 0.12em; font-size: 0.95rem; }
+  @media (min-width: 901px) and (max-width: 1180px) { .nav-links { gap: 1.4rem; } }
+
   .hero-stats {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -676,6 +685,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
     <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="it">Chi sono</a></li>
     <li><a href="#services" data-lang="en">Services</a><a href="#services" data-lang="it">Servizi</a></li>
     <li><a href="#portfolio" data-lang="en">Portfolio</a><a href="#portfolio" data-lang="it">Portfolio</a></li>
+    <li><a href="#testimonials" data-lang="en">Recommendations</a><a href="#testimonials" data-lang="it">Referenze</a></li>
     <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="it">Contatti</a></li>
   </ul>
   <div class="nav-right">
@@ -715,6 +725,11 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
           <span data-lang="it">Portfolio</span>
         </a>
       </div>
+      <a href="#testimonials" class="hero-proof">
+        <span class="hero-proof-stars" aria-hidden="true">★★★★★</span>
+        <span data-lang="en">5.0 from 2 LinkedIn reviews · Read the recommendations →</span>
+        <span data-lang="it">5.0 su 2 recensioni LinkedIn · Leggi le referenze →</span>
+      </a>
     </div>
     <div class="hero-stats">
       <div class="stat-card">

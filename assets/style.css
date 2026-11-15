@@ -302,3 +302,5 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
 @media (max-width: 340px) {
   .nav-logo > span { display: none; }
 }
+
+@media (min-width: 901px) and (max-width: 1180px) { .nav-links { gap: 1.4rem; } }
