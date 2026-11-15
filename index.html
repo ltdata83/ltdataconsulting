@@ -680,7 +680,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><img src="assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span style="color:var(--white)">LT <span>Data Consulting</span></span></a>
+  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});try{history.replaceState(null,'',location.pathname)}catch(e){};return false;"><img src="assets/logo-mark.png" alt="" class="nav-mark" width="69" height="36"><span style="color:var(--white)">LT <span>Data Consulting</span></span></a>
   <ul class="nav-links">
     <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="it">Chi sono</a></li>
     <li><a href="#services" data-lang="en">Services</a><a href="#services" data-lang="it">Servizi</a></li>
@@ -1267,10 +1267,37 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
 
 <button class="to-top" type="button" aria-label="Back to top">↑</button>
 <script>
+  // Section currently on screen ('' when the visitor is at the top / hero)
+  function currentSection() {
+    var cur = '';
+    document.querySelectorAll('section[id]').forEach(function (s) {
+      if (s.getBoundingClientRect().top <= 140) cur = s.id;
+    });
+    return cur;
+  }
+
+  // Switch language and land on the section being read, not the last one clicked
   function goLang(url) {
-    location.href = url + location.hash;
+    var cur = currentSection();
+    location.href = url + (cur ? '#' + cur : '');
     return false;
   }
+
+  // Keep the address bar in step with the section on screen
+  (function () {
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return; ticking = true;
+      setTimeout(function () {
+        ticking = false;
+        var cur = currentSection();
+        var target = location.pathname + location.search + (cur ? '#' + cur : '');
+        if (target !== location.pathname + location.search + location.hash) {
+          try { history.replaceState(null, '', target); } catch (e) {}
+        }
+      }, 150);
+    }, { passive: true });
+  })();
 
   // Copy the email address (for visitors who use webmail)
   function copyEmail(btn) {
