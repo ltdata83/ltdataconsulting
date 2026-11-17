@@ -121,4 +121,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/networking-chapter-analytics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-gruppo-networking/"/>
   </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/territorial-analytics-borgosesia/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/territorial-analytics-borgosesia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-territoriale-borgosesia/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/analisi-territoriale-borgosesia/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/territorial-analytics-borgosesia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-territoriale-borgosesia/"/>
+  </url>
 </urlset>
