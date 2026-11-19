@@ -485,6 +485,9 @@
   }
   .portfolio-link:hover { color: var(--navy); }
   .service-card .portfolio-link:hover { color: #fff; }
+  .service-card[id] { scroll-margin-top: 90px; }
+  .service-card.flash { animation: svcFlash 2.2s ease-out; }
+  @keyframes svcFlash { 0%,35% { background: var(--navy-mid); box-shadow: inset 0 0 0 1px var(--gold); } 100% { box-shadow: inset 0 0 0 1px transparent; } }
   a.portfolio-link[data-lang="it"] { display: none; }
   body.it a.portfolio-link[data-lang="it"] { display: inline-block; }
 
@@ -924,7 +927,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
       </h2>
     </div>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card" id="svc-bi">
         <span class="service-icon">📊</span>
         <div class="service-title" data-lang="en">Business Intelligence & Dashboards</div>
         <div class="service-title" data-lang="it">Business Intelligence e Dashboard</div>
@@ -938,7 +941,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/en/case-studies/customer-satisfaction-dashboard/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/dashboard-customer-satisfaction/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card" id="svc-automation">
         <span class="service-icon">⚙️</span>
         <div class="service-title" data-lang="en">Reporting Automation</div>
         <div class="service-title" data-lang="it">Automazione del Reporting</div>
@@ -952,7 +955,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/en/case-studies/cost-consolidation-script/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/script-consolidamento-costi/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card" id="svc-api">
         <span class="service-icon">🔌</span>
         <div class="service-title" data-lang="en">API Integration & Data Pipelines</div>
         <div class="service-title" data-lang="it">Integrazione API e Pipeline Dati</div>
@@ -966,7 +969,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/en/case-studies/multi-api-data-consolidation/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/consolidamento-dati-multi-api/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card" id="svc-strategy">
         <span class="service-icon">🎯</span>
         <div class="service-title" data-lang="en">Data Strategy & Process Improvement</div>
         <div class="service-title" data-lang="it">Strategia Dati e Miglioramento Processi</div>
@@ -979,7 +982,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/en/case-studies/linkedin-content-analytics/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/analisi-contenuti-linkedin/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card" id="svc-territorial">
         <span class="service-icon">🗺️</span>
         <div class="service-title" data-lang="en">Territorial & Demographic Analytics</div>
         <div class="service-title" data-lang="it">Analisi Territoriali e Demografiche</div>
@@ -993,7 +996,7 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         <a href="/en/case-studies/territorial-analytics-borgosesia/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/analisi-territoriale-borgosesia/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
-      <div class="service-card">
+      <div class="service-card" id="svc-website">
         <span class="service-icon">🌐</span>
         <div class="service-title" data-lang="en">Website & Search Visibility</div>
         <div class="service-title" data-lang="it">Sito Web e Visibilità Online</div>
@@ -1363,6 +1366,24 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
         }
       }, 150);
     }, { passive: true });
+  })();
+
+  // Links from case studies land on the specific service card
+  (function () {
+    var id = location.hash.slice(1);
+    if (id.indexOf('svc-') !== 0) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var go = function () { el.scrollIntoView({ block: 'start' }); };
+    var stop = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) {
+      window.addEventListener(e, function () { stop = true; }, { once: true, passive: true });
+    });
+    var again = function () { if (!stop) go(); };
+    go(); el.classList.add('flash');
+    window.addEventListener('load', again);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
+    setTimeout(again, 600);
   })();
 
   // Copy the email address (for visitors who use webmail)
