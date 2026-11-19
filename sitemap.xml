@@ -133,4 +133,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/territorial-analytics-borgosesia/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/analisi-territoriale-borgosesia/"/>
   </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/en/case-studies/bilingual-website-search-visibility/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/bilingual-website-search-visibility/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/sito-bilingue-visibilita-online/"/>
+  </url>
+  <url>
+    <loc>https://www.ltdataconsulting.eu/it/case-study/sito-bilingue-visibilita-online/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ltdataconsulting.eu/en/case-studies/bilingual-website-search-visibility/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.ltdataconsulting.eu/it/case-study/sito-bilingue-visibilita-online/"/>
+  </url>
 </urlset>
