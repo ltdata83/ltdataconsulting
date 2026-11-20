@@ -485,6 +485,11 @@
   }
   .portfolio-link:hover { color: var(--navy); }
   .service-card .portfolio-link:hover { color: #fff; }
+  .service-prices { list-style: none; margin: 1.25rem 0 0; padding: 0.9rem 0 0; border-top: 1px solid rgba(255,255,255,0.12); }
+  .service-prices li { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.84rem; line-height: 1.5; color: rgba(255,255,255,0.7); padding: 0.25rem 0; }
+  .service-prices li strong { color: #fff; font-weight: 500; white-space: nowrap; }
+  .service-prices-note { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 0.5rem; }
+  .services-quote-note { margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted, #6b7280); text-align: center; }
   .service-card[id] { scroll-margin-top: 90px; }
   .service-card.flash { position: relative; z-index: 1; animation: svcFlash 4s ease-out; }
   @keyframes svcFlash {
@@ -1010,10 +1015,26 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
           <span class="tool-tag">Looker Studio</span>
           <span class="tool-tag">SEO</span>
         </div>
+        <ul class="service-prices" data-lang="en">
+          <li><span>One-page bilingual site + Google &amp; Bing set-up</span><strong>from €600</strong></li>
+          <li><span>Full bilingual site with service or project pages + search dashboard</span><strong>from €1,800</strong></li>
+          <li><span>Search dashboard for an existing site</span><strong>from €400</strong></li>
+          <li><span>Monthly monitoring with a short report</span><strong>from €50/month</strong></li>
+        </ul>
+        <ul class="service-prices" data-lang="it">
+          <li><span>Sito bilingue a pagina singola + configurazione Google e Bing</span><strong>da 600 €</strong></li>
+          <li><span>Sito bilingue completo con pagine servizi o progetti + dashboard ricerche</span><strong>da 1.800 €</strong></li>
+          <li><span>Dashboard ricerche per un sito esistente</span><strong>da 400 €</strong></li>
+          <li><span>Monitoraggio mensile con breve report</span><strong>da 50 €/mese</strong></li>
+        </ul>
+        <div class="service-prices-note" data-lang="en">Indicative prices, no VAT applied (Italian flat-rate scheme). Domain and hosting paid directly by you.</div>
+        <div class="service-prices-note" data-lang="it">Prezzi indicativi, IVA non applicata (regime forfettario). Dominio ed eventuale hosting a carico del cliente.</div>
         <a href="/en/case-studies/bilingual-website-search-visibility/" class="portfolio-link" data-lang="en">See an example →</a>
         <a href="/it/case-study/sito-bilingue-visibilita-online/" class="portfolio-link" data-lang="it">Vedi un esempio →</a>
       </div>
     </div>
+    <p class="services-quote-note" data-lang="en">All other services are quoted after a free introductory call.</p>
+    <p class="services-quote-note" data-lang="it">Per gli altri servizi preventivo su misura, dopo una prima chiamata gratuita.</p>
   </div>
 </section>
 
