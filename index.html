@@ -275,6 +275,9 @@
   }
 
   .credential-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .credential-item.has-logo { display: flex; gap: 1rem; align-items: flex-start; }
+  .credential-logo { flex: 0 0 44px; width: 44px; height: 44px; object-fit: contain; margin-top: 0.15rem; }
+  .credential-body { flex: 1; min-width: 0; }
 
   .credential-label {
     font-size: 0.68rem; font-weight: 500;
@@ -808,45 +811,57 @@ nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45d
           </div>
         </div>
 
-        <div class="credential-item">
-          <div class="credential-label">
-            <span data-lang="en">Master's Degree (EQF 7)</span>
-            <span data-lang="it">Titolo di secondo livello (EQF 7)</span>
+        <div class="credential-item has-logo">
+          <img src="assets/img/logo-bpp.png" alt="BPP University" class="credential-logo" width="44" height="44" loading="lazy">
+          <div class="credential-body">
+            <div class="credential-label">
+              <span data-lang="en">Master's Degree (EQF 7)</span>
+              <span data-lang="it">Titolo di secondo livello (EQF 7)</span>
+            </div>
+            <div class="credential-value">Master of Science (MSc) in Management with Project Management</div>
+            <div class="credential-sub">BPP University, London, 2012–2013 · Merit, Distinction in Business Consultancy</div>
           </div>
-          <div class="credential-value">Master of Science (MSc) in Management with Project Management</div>
-          <div class="credential-sub">BPP University, London, 2012–2013 · Merit, Distinction in Business Consultancy</div>
         </div>
 
-        <div class="credential-item">
-          <div class="credential-label">
-            <span data-lang="en">Professional Qualification</span>
-            <span data-lang="it">Qualifica Professionale</span>
+        <div class="credential-item has-logo">
+          <img src="assets/img/logo-cmi.png" alt="Chartered Management Institute" class="credential-logo" width="44" height="44" loading="lazy">
+          <div class="credential-body">
+            <div class="credential-label">
+              <span data-lang="en">Professional Qualification</span>
+              <span data-lang="it">Qualifica Professionale</span>
+            </div>
+            <div class="credential-value">CMI Level 7 (EQF)</div>
+            <div class="credential-sub">Chartered Management Institute, 2012–2014</div>
           </div>
-          <div class="credential-value">CMI Level 7 (EQF)</div>
-          <div class="credential-sub">Chartered Management Institute, 2012–2014</div>
         </div>
 
-        <div class="credential-item">
-          <div class="credential-label">
-            <span data-lang="en">Professional Qualification</span>
-            <span data-lang="it">Qualifica Professionale</span>
+        <div class="credential-item has-logo">
+          <img src="assets/img/logo-cima.png" alt="CIMA" class="credential-logo" width="44" height="44" loading="lazy">
+          <div class="credential-body">
+            <div class="credential-label">
+              <span data-lang="en">Professional Qualification</span>
+              <span data-lang="it">Qualifica Professionale</span>
+            </div>
+            <div class="credential-value">CIMA Certificate in Business Accounting</div>
+            <div class="credential-sub">The Chartered Institute of Management Accountants, 2010–2011</div>
           </div>
-          <div class="credential-value">CIMA Certificate in Business Accounting</div>
-          <div class="credential-sub">The Chartered Institute of Management Accountants, 2010–2011</div>
         </div>
 
-        <div class="credential-item">
-          <div class="credential-label">
-            <span data-lang="en">Bachelor's Degree</span>
-            <span data-lang="it">Laurea</span>
-          </div>
-          <div class="credential-value">
-            <span data-lang="en">Bachelor's Degree (Laurea), Business and Management curriculum</span>
-            <span data-lang="it">Laurea, percorso economico-gestionale</span>
-          </div>
-          <div class="credential-sub">
-            <span data-lang="en">Faculty of Economics, University of Eastern Piedmont, Novara, 2002–2005 · Comparable to a UK Bachelor (Honours) degree</span>
-            <span data-lang="it">Facoltà di Economia, Università del Piemonte Orientale, Novara, 2002–2005</span>
+        <div class="credential-item has-logo">
+          <img src="assets/img/logo-upo.png" alt="Università del Piemonte Orientale" class="credential-logo" width="44" height="44" loading="lazy">
+          <div class="credential-body">
+            <div class="credential-label">
+              <span data-lang="en">Bachelor's Degree</span>
+              <span data-lang="it">Laurea</span>
+            </div>
+            <div class="credential-value">
+              <span data-lang="en">Bachelor's Degree (Laurea), Business and Management curriculum</span>
+              <span data-lang="it">Laurea, percorso economico-gestionale</span>
+            </div>
+            <div class="credential-sub">
+              <span data-lang="en">Faculty of Economics, University of Eastern Piedmont, Novara, 2002–2005 · Comparable to a UK Bachelor (Honours) degree</span>
+              <span data-lang="it">Facoltà di Economia, Università del Piemonte Orientale, Novara, 2002–2005</span>
+            </div>
           </div>
         </div>
 
